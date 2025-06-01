@@ -1,21 +1,19 @@
+<!-- vim: set ft=html : -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="/static/global.css">
+    <title>{% block title %}My Website{% endblock %}</title>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script src="//unpkg.com/alpinejs" defer></script>
+    {% block head %}
+    <link rel="stylesheet" href="/static/global.css">
+    {% endblock %}
   </head>
   <body>
-    <div x-data="{ open: false }">
-      <button @click="open = !open">Expand</button>
-
-      <span x-show="open">
-        Content...
-      </span>
-    </div>
+    <header>{% block header %}{% endblock %}</header>
+    <main>{% block content %}content{% endblock %}</main>
   </body>
 </html>

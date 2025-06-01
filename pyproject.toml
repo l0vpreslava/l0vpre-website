@@ -28,3 +28,7 @@ dev = [
     "black>=25.1.0",
     "mypy>=1.15.0",
 ]
+
+[tool.jinja-lsp]
+templates = "./src/website/templates"
+backend = ["./src/website"]
