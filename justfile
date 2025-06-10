@@ -9,5 +9,6 @@ check:
 [working-directory: '.']
 fmt:
     uv run black .
+    prettier -w static
 
 prepare: fmt check

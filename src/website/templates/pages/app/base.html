@@ -1,10 +1,21 @@
 <!-- vim: set ft=html : -->
 {% extends "pages/base.html" %}
 {% block header %}
-<ul>
-  <li><a href="/">Home</a></li>
-  <li><a href="/commissions">Commissions</a></li>
-  <li><a href="/gallery">Gallery</a></li>
-  <li><a href="/oc">OC</a></li>
-</ul>
+<nav>
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/commissions">Commissions</a></li>
+    <li><a href="/gallery">Gallery</a></li>
+    <li><a href="/oc">OC</a></li>
+  </ul>
+</nav>
 {% endblock %}
+{% block footer %}
+<p>©2025 l0vpre</p>
+{% endblock %}
+
+

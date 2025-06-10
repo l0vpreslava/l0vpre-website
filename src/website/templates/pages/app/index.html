@@ -1,5 +1,40 @@
 <!-- vim: set ft=html : -->
 {% extends "pages/app/base.html" %}
+{% block header %}
+{{ super() }}
+<img class="splash-art" src="/static/images/homepage.png" alt="splash art"/>
+{% endblock %}
 {% block content %}
-<h1>HOMEPAGE - l0vpre</h1>
+<div class="about">
+  <div class="about-content">
+    <div class="name">
+      <h2>l0vpre</h2>
+      <h3>illustrator and character designer</h3>
+    </div>
+    <div class="info">
+      <p>he worked as an illustrator for a game company and then freelanced.</p>
+      <p>recent major works include "fuwamoco", "icemary senna (blue archive)", "hatsune miku figure series sporty", etc.</p>
+      <p>it is on sale from genkosha, a collection of paintings "mellow".</p>
+    </div> 
+  </div>
+  <div class="about-icon">
+    <img src="/static/images/icon.png" alt="about icon"/>
+  </div>
+</div>
+<h1>ARTWORKS</h1>
+<div class="index-artworks">
+  <div class="index-artworks-grid">
+    <div class="index-artworks-item"></div>
+    <div class="index-artworks-item"></div>
+    <div class="index-artworks-item"></div>
+  </div>
+  <div class="index-artworks-link">
+  <a href="/gallery">view more</a>
+  </div>
+</div>
+
+<div class="index-contact">
+  <h1>CONTACT</h1>
+  <p> здесь моэно со мной связаться по таким ссылкам</p>
+</div>
 {% endblock %}
