@@ -3,6 +3,7 @@
   --text-color: #e6b3ea;
   --accent-color: #e8d4ed;
   --accent-dim-color: #6f6771;
+  --section-margin-top: 200px;
 }
 
 :root[data-theme="light"] {
@@ -10,11 +11,29 @@
   --text-color: #4dabf7;
 }
 
+@font-face {
+  font-family: "Oxygen Regular";
+  src: url("../fonts/Oxygen-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lilita One", sans-serif;
+  src: url("../fonts/LilitaOne-Regular.ttf");
+}
+
+html {
+  height: 100%;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   margin: 0;
   padding: 0;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-family: "Oxygen Regular", sans-serif;
 }
 
 main {
@@ -69,7 +88,7 @@ h1 {
   gap: 20px;
   justify-items: stretch;
   height: 40em;
-  margin-top: 250px;
+  margin-top: var(--section-margin-top);
   box-sizing: border-box;
   padding: 0 40px;
 }
@@ -80,6 +99,30 @@ h1 {
   border-radius: 40px;
   flex-grow: 1;
   min-width: 0;
+  padding: 0px 20px;
+}
+
+.index-about-name {
+  font-size: 1.8em;
+  border-bottom: 2px solid #000;
+  padding: 0 45px;
+  font-family: "Lilita One", sans-serif;
+}
+
+.index-about-name h1 {
+  text-align: left;
+  margin-bottom: 0.1em;
+}
+
+.index-about-name h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
+}
+
+.index-about-info {
+  padding: 35px 45px;
+  font-size: 1.4em;
+  line-height: 1.5;
 }
 
 .about-icon {
@@ -93,6 +136,18 @@ h1 {
   border-radius: inherit;
 }
 
+.index-about-social-icons {
+  display: flex;
+  gap: 1.5em;
+  margin-top: 7.5em;
+}
+
+.index-about-social-icons a {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .index-artworks {
   width: 100%;
   background-color: var(--accent-dim-color);
@@ -100,6 +155,10 @@ h1 {
   padding: 20px;
   text-align: center;
   box-sizing: border-box;
+}
+
+.artworks {
+  margin-top: var(--section-margin-top);
 }
 
 .index-artworks-link {
@@ -129,6 +188,10 @@ h1 {
 
 .index-contact h1 {
   text-align: left;
+}
+
+.index-contact {
+  margin-top: 100px;
 }
 
 .switch {
